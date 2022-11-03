@@ -59,7 +59,7 @@ export default function ReactDropzoneInput({ name }: Props) {
 
   return (
     <div {...getRootProps()} onClick={() => inputRef.current?.click()}>
-      <input {...getInputProps()} accept="image/*" ref={inputRef} />
+      <input {...getInputProps()} accept={getInputProps().accept} ref={inputRef} />
 
       {acceptedFiles.length !== 0 && (
         <ul>
